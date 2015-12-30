@@ -5141,3 +5141,253 @@ DEBUG - 2015-11-24 22:52:47 --> Final output sent to browser
 ERROR - 2015-11-24 22:52:47 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
 DEBUG - 2015-11-24 22:52:47 --> Total execution time: 0.0272
 ERROR - 2015-11-24 22:52:47 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Config Class Initialized
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Hooks Class Initialized
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Utf8 Class Initialized
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> UTF-8 Support Enabled
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> URI Class Initialized
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Router Class Initialized
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Output Class Initialized
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Security Class Initialized
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Input Class Initialized
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Global POST and COOKIE data sanitized
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Language Class Initialized
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Loader Class Initialized
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Config file loaded: application/config/error_code.php
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Config file loaded: application/config/system.php
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Config file loaded: application/config/dns_url.php
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Config file loaded: application/config/memcached.php
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Helper loaded: cookie_helper
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Helper loaded: url_helper
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Helper loaded: global_helper
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Helper loaded: pages_helper
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Helper loaded: curl_helper
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Helper loaded: cache_helper
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Helper loaded: xxtea_helper
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Helper loaded: check_form_helper
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Database Driver Class Initialized
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Controller Class Initialized
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Model Class Initialized
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Model Class Initialized
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Model Class Initialized
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Model Class Initialized
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Model Class Initialized
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> File loaded: application/views/admin/header.php
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> File loaded: application/views/admin/left_menu.php
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> File loaded: application/views/admin/manage/man_list.php
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> File loaded: application/views/admin/footer.php
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Final output sent to browser
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:34 --> Total execution time: 0.0348
+ERROR - 2015-11-24 23:02:34 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Config Class Initialized
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Hooks Class Initialized
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Utf8 Class Initialized
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> UTF-8 Support Enabled
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> URI Class Initialized
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Router Class Initialized
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Output Class Initialized
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Security Class Initialized
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Input Class Initialized
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Global POST and COOKIE data sanitized
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Language Class Initialized
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Loader Class Initialized
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Config file loaded: application/config/error_code.php
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Config file loaded: application/config/system.php
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Config file loaded: application/config/dns_url.php
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Config file loaded: application/config/memcached.php
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Helper loaded: cookie_helper
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Helper loaded: url_helper
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Helper loaded: global_helper
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Helper loaded: pages_helper
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Helper loaded: curl_helper
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Helper loaded: cache_helper
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Helper loaded: xxtea_helper
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Helper loaded: check_form_helper
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Database Driver Class Initialized
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Controller Class Initialized
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Model Class Initialized
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Model Class Initialized
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Model Class Initialized
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Model Class Initialized
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Model Class Initialized
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> File loaded: application/views/admin/header.php
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> File loaded: application/views/admin/left_menu.php
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 11
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 14
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 24
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 25
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: data_info /var/web/exam/h_code/application/views/admin/manage/man_create.php 34
+ERROR - 2015-11-24 23:02:38 --> Severity: Notice  --> Undefined variable: city /var/web/exam/h_code/application/views/admin/manage/man_create.php 43
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> Invalid argument supplied for foreach() /var/web/exam/h_code/application/views/admin/manage/man_create.php 43
+DEBUG - 2015-11-24 23:02:38 --> File loaded: application/views/admin/manage/man_create.php
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> File loaded: application/views/admin/footer.php
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Final output sent to browser
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:02:38 --> Total execution time: 0.0302
+ERROR - 2015-11-24 23:02:38 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Config Class Initialized
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Hooks Class Initialized
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Utf8 Class Initialized
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> UTF-8 Support Enabled
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> URI Class Initialized
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Router Class Initialized
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> No URI present. Default controller set.
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Output Class Initialized
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Security Class Initialized
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Input Class Initialized
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Global POST and COOKIE data sanitized
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Language Class Initialized
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Loader Class Initialized
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Config file loaded: application/config/error_code.php
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Config file loaded: application/config/system.php
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Config file loaded: application/config/dns_url.php
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Config file loaded: application/config/memcached.php
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Helper loaded: cookie_helper
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Helper loaded: url_helper
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Helper loaded: global_helper
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Helper loaded: pages_helper
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Helper loaded: curl_helper
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Helper loaded: cache_helper
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Helper loaded: xxtea_helper
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Helper loaded: check_form_helper
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Database Driver Class Initialized
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Controller Class Initialized
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+ERROR - 2015-11-24 23:48:32 --> Severity: Notice  --> Undefined offset: 3 /var/web/exam/h_code/application/libraries/SsoCookie.php 45
+ERROR - 2015-11-24 23:48:32 --> Severity: Notice  --> Undefined offset: 2 /var/web/exam/h_code/application/libraries/SsoCookie.php 45
+ERROR - 2015-11-24 23:48:32 --> Severity: Notice  --> Undefined offset: 1 /var/web/exam/h_code/application/libraries/SsoCookie.php 45
+DEBUG - 2015-11-24 23:48:32 --> File loaded: application/views/admin/login.php
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Final output sent to browser
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
+DEBUG - 2015-11-24 23:48:32 --> Total execution time: 0.0214
+ERROR - 2015-11-24 23:48:32 --> Severity: Warning  --> chmod(): Operation not permitted /var/web/exam/h_code/system/libraries/Log.php 106
