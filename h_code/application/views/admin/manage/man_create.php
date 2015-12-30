@@ -19,7 +19,7 @@
                     <span class="span2 floatL">请填写代理商名称</span>
                 </div>
                 <div class="text">
-                    <span class="floatL span1"><i>*</i>省份:</span>
+                    <span class="floatL span1"><i>*</i>角色:</span>
                     <select  class="sect_1 floatL" name="login_role_id">
                         <option value="2" <?php echo $data_info['login_role_id']==THIRD_ROLE_INFO?'selected':'' ;?>>代理商</option>
                         <option value="1" <?php echo $data_info['login_role_id']==MANGER_ROLE_INFO?'selected':'' ;?>>管理员</option>

@@ -1,7 +1,7 @@
 <div class="main-wrap">
 
     <div class="crumb-wrap">
-        <div class="crumb-list"><i class="icon-font"></i><a href="/admin">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">试卷类型分类列表</span></div>
+        <div class="crumb-list"><i class="icon-font"></i><a href="/admin">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">试卷科目分类列表</span></div>
     </div>
     <div class="search-wrap">
         <div class="search-content">
@@ -9,7 +9,7 @@
                 <table class="search-tab">
                     <tr>
 
-                        <th width="100">分类名称:</th>
+                        <th width="100">科目分类名称:</th>
                         <td>
                             <input type="text" name="s_name" id="s_name" value="<?echo $s_name; ?>" /> 
                         </td>
@@ -19,7 +19,7 @@
                         </td>
                         <td></td>
                         <td>
-                            <a id="updateOrd" href="/classify/create" class="btn btn-primary btn2"><i class="icon-font"></i>增加类型分类</a>
+                            <a id="updateOrd" href="/kemucate/create" class="btn btn-primary btn2"><i class="icon-font"></i>增加科目分类</a>
                         </td>
                     </tr>
 
@@ -54,7 +54,7 @@
                             <td><?php echo $v['cate_name']?></td>
                             <td><?php echo $v['modify_time']?$v['modify_time']:$v['created_time']?></td>
                             <td>
-                                <a class="audit" href="<?php MAIN_PATH;?>/classify/edit?id=<?php echo $v['id'];?>" >修改</a>
+                                <a class="audit" href="<?php MAIN_PATH;?>/kemucate/edit?id=<?php echo $v['id'];?>" >修改</a>
                                 <a class="dele_Agent" href="javascript:;" rel="<?php echo $v['id'];?>" >删除</a>
                             </td>
                         </tr>
@@ -72,7 +72,7 @@
      * Created By YJ 2015-11-7
      */
     $(function(){
-        var url=config.domain.wf+'/classify/deleteAgent';
+        var url=config.domain.wf+'/kemucate/deleteAgent';
         //批量删除
         $('#dele_select_agents').bind('click',function(){
             var obj={},data={},ids='',_msg={};

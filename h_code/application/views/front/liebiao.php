@@ -13,9 +13,12 @@
     <META name=GENERATOR content="MSHTML 8.00.6001.23580"></HEAD>
 <BODY>
 <DIV class=minNav><!--mini导航-->
-    <DIV class=navInner><SPAN class=homeIco><A href="#" >VIP指南</A> | <A class=myTest href="#" >会员中心</A> | <A class=sina href="#" >官方微博</A> </SPAN><SPAN id=ks110_LoginView
-                                                                                                                                                        class=login>欢迎来到清大网校<A href="#">登录</A><A href="#" >免费注册</A>
-</SPAN>
+    <DIV class=navInner><SPAN class=homeIco><A href="http://www.qingdawangxiao.com/member/" >VIP指南</A> | <A class=myTest href="http://www.qingdawangxiao.com/member/" >会员中心</A> | <A class=sina href="http://www.qingdawangxiao.com/member/  " >官方微博</A> </SPAN>
+        <?php if($this->input->get_post('user_name')){?>
+        <SPAN id=ks110_LoginView class=login><?php echo $this->input->get_post('user_name');?>,欢迎来到清大网校</SPAN>
+        <?php }else{?>
+        <SPAN id=ks110_LoginView class=login>欢迎来到清大网校<A href="#">登录</A><A href="#" >免费注册</A></SPAN>
+        <?php }?>
     </DIV></DIV>
 <DIV class="banner ">
 
@@ -51,7 +54,8 @@
     <DIV><SPAN class=n1>1.选择试题</SPAN><SPAN class=n2>2.注册/登陆</SPAN><SPAN
             class=n3>3.开始答题</SPAN><SPAN class=n4>4.提交试卷</SPAN><SPAN
             class=n5>5.查看成绩</SPAN><SPAN class=n6>6.答案解析</SPAN></DIV></DIV>
-<DIV class=bread><SPAN>您的位置：</SPAN><A href="#">清大网校在线考试中心</A>&nbsp;&gt; <A #href="#">职业资格</A>&nbsp;&gt; 证券从业资格 </DIV>
+
+<DIV class=bread><SPAN>您的位置：</SPAN>试题列表</DIV>
 <DIV class="mainContent m2"><!--主体内容-->
     <DIV class=mainList>
 <!--        <DIV class=nav><A class=on href="#"><STRONG>全部试题</STRONG></A><A href="#"><STRONG>模拟试题</STRONG></A><A href="#"><STRONG>历年真题</STRONG></A><A href="#"><STRONG>预测题</STRONG></A> </DIV>-->
@@ -83,6 +87,14 @@
         </DIV>
     </DIV>
 </DIV>
+<script>
+    var user_id="<?php echo $this->input->get_post("user_id");?>";
+    var user_name="<?php echo $this->input->get_post("user_name");?>";
+
+    if(!user_id||user_name.length<1){
+        alert('用户未登录！')
+    }
+</script>
 <DIV class=footer>
     <a href="#">如何成为VIP会员</a>&nbsp;&nbsp;<a href="#" >联系我们</a>&nbsp;&nbsp;<a href="#" >版权说明</a>&nbsp;&nbsp;<a href="#" >帮助中心</a></p><p>湘ICP备11011645号</p>
 

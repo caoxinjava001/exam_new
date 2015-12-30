@@ -115,6 +115,8 @@ function pages($num, $curr_page, $perpage = 20, $url = '', $param_num=3, $setpag
 		{
 			$multipage .= ' <a href="'.pageurl($url, $pages, $param_num, $array).'">'.$pages.'</a> <a href="'.pageurl($url, $curr_page+1, $param_num, $array).'" class="next">下一页</a>';
 		}
+		/*
+		
 		$multipage .= '<span><input id="pages_num" type="text" value="" class="page_ys" /></span>';
 		$multipage .= '<input id="go_page_num" type="button" class="page_qd" value="确认" />';
 
@@ -151,6 +153,7 @@ function pages($num, $curr_page, $perpage = 20, $url = '', $param_num=3, $setpag
 		$multipage .= '	}'.chr(13);
 		$multipage .= '});'.chr(13);
 		$multipage .= '</script>'.chr(13);
+		*/
 
 		$multipage .= '</div>';
 	}

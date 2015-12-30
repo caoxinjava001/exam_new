@@ -1,5 +1,5 @@
 <div class="crumb-wrap">
-    <div class="crumb-list"><i class="icon-font"></i><a href="/admin">首页</a><span class="crumb-step">&gt;</span><a href="/classify/index"><span class="crumb-name">试卷类型分类列表</span></a></div>
+    <div class="crumb-list"><i class="icon-font"></i><a href="/admin">首页</a><span class="crumb-step">&gt;</span><a href="/classcate/index"><span class="crumb-name">试卷年级分类列表</span></a></div>
 </div>
 <link href="<?php echo STATICS_PATH;?>/css/ui/jquery-ui-custom.min.css" type="text/css" rel="stylesheet"/>
 <link href="<?php echo STATICS_PATH;?>/css/b_reg.css" type="text/css" rel="stylesheet"/>
@@ -8,7 +8,7 @@
 <div class="xu" id="xu">
     <div class="cont_left">
         <div class="cont_demand">
-            <p class="demand_p1"><?php echo $data_info['id']?'修改类型分类':'增加类型分类';?></p>
+            <p class="demand_p1"><?php echo $data_info['id']?'修改年级分类':'增加年级分类';?></p>
         </div>
         <form id="card_add">
             <input type="hidden" name="check_id" value="<?php echo $data_info['id'];?>"/>
@@ -52,7 +52,7 @@
                 var up_data =$('#card_add').serialize();
                 obj.data = up_data;
                 obj.type = 'post';
-                obj.url = config.domain.wf+'/classify/createCard';
+                obj.url = config.domain.wf+'/classcate/createCard';
                 _util.ajax(obj, function (d) {
                     _show_msg(d.msg);
                     if(d.status==1){
