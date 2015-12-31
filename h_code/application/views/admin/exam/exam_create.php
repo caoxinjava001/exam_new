@@ -26,7 +26,31 @@
                     <span class="span2 floatL">请填写试卷名称</span>
                 </div>
 				<div class="text">
-                    <span class="floatL span1"><i>*</i>试卷分类:</span>
+                    <span class="floatL span1"><i>*</i>年级分类:</span>
+                    <select  class="sect_1 floatL" name="class_cate_id">
+					<option value="" >请选择</option>
+                        <?php foreach($exam_class_tag_list as $v){?>
+                            <option <?php if($v['id']== $data_info['class_cate_id']) echo 'selected="selected"';?> value="<?php echo $v['id'];?>"><?php echo $v['cate_name'];?></option>
+                        <?php }?>
+                    </select>
+                    <span class="span2 floatL">请选择年级</span>
+                </div>
+
+
+				<div class="text">
+                    <span class="floatL span1"><i>*</i>科目分类:</span>
+                    <select  class="sect_1 floatL" name="kemu_cate_id">
+					<option value="" >请选择</option>
+                        <?php foreach($exam_kemu_tag_list as $v){?>
+                            <option <?php if($v['id']== $data_info['kemu_cate_id']) echo 'selected="selected"';?> value="<?php echo $v['id'];?>"><?php echo $v['cate_name'];?></option>
+                        <?php }?>
+                    </select>
+                    <span class="span2 floatL">请选择用户角色</span>
+                </div>
+
+
+				<div class="text">
+                    <span class="floatL span1"><i>*</i>类型分类:</span>
                     <select  class="sect_1 floatL" name="cate_id">
 					<option value="" >请选择</option>
                         <?php foreach($exam_tag_list as $v){?>
@@ -35,6 +59,7 @@
                     </select>
                     <span class="span2 floatL">请选择用户角色</span>
                 </div>
+
                 <div class="text">
                     <span class="floatL span1"></span>
                     <input type="submit" class="btn btn-blue" id="createManager" value="确 定">

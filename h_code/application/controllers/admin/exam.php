@@ -19,6 +19,8 @@ class Exam extends MY_Controller{
 
     public function __construct(){
         parent::__construct();
+        $this->load->model('exam_tag_kemu_model');
+        $this->load->model('exam_tag_class_model');
 
         $this->load->model('exam_stem_model');
         $this->load->model('exam_model');
@@ -35,7 +37,16 @@ class Exam extends MY_Controller{
     public function index(){
 		$exam_tag_where['dele_status'] = NO_DELETE_STATUS;
 		$exam_tag_list=$this->exam_tag_model->select('*',$exam_tag_where);
+
+		$exam_class_tag_where['dele_status'] = NO_DELETE_STATUS;
+		$exam_class_tag_list=$this->exam_tag_class_model->select('*',$exam_class_tag_where);
+
+		$exam_kemu_tag_where['dele_status'] = NO_DELETE_STATUS;
+		$exam_kemu_tag_list=$this->exam_tag_kemu_model->select('*',$exam_kemu_tag_where);
+
+
         $this->where= 'dele_status = '.NO_DELETE_STATUS;    //未删除的
+
         $select_id=$this->input->get_post('select_id'); //选择的卡状态
         if(strlen($select_id)>0){
             $select_id=intval($select_id);
@@ -43,6 +54,25 @@ class Exam extends MY_Controller{
         }else{
             $select_id=null;
         }
+
+        $class_select_id=$this->input->get_post('class_select_id'); //选择的卡状态
+        if(strlen($class_select_id)>0){
+            $class_select_id=intval($class_select_id);
+            $this->where.= ' and class_cate_id = '.$class_select_id;
+        }else{
+            $class_select_id=null;
+        }
+
+
+        $kemu_select_id=$this->input->get_post('kemu_select_id'); //选择的卡状态
+        if(strlen($kemu_select_id)>0){
+            $kemu_select_id=intval($kemu_select_id);
+            $this->where.= ' and kemu_cate_id = '.$kemu_select_id;
+        }else{
+            $kemu_select_id=null;
+        }
+
+
         $s_name=$this->input->get_post('s_name'); //填写的代理商名字
         if($s_name){
             $this->where .= " and exam_name like '%{$s_name}%'";    //检索代理商
@@ -62,6 +92,14 @@ class Exam extends MY_Controller{
         $exam_list=$this->exam_model->list_info('*',$this->where,$this->page,$this->perpage);
 		$exam_list = is_array($exam_list) ? $exam_list : array();
 		foreach($exam_list as $key=>$val) {
+			$where_tag['id'] = $val['class_cate_id'];
+			$tmp_exam_tag_list=$this->exam_tag_class_model->get_one('*',$where_tag);
+			$exam_list[$key]['class_tag_list'] = $tmp_exam_tag_list;
+
+			$where_tag['id'] = $val['kemu_cate_id'];
+			$tmp_exam_tag_list=$this->exam_tag_model->get_one('*',$where_tag);
+			$exam_list[$key]['kemu_tag_list'] = $tmp_exam_tag_list;
+
 			$where_tag['id'] = $val['cate_id'];
 			$tmp_exam_tag_list=$this->exam_tag_model->get_one('*',$where_tag);
 			$exam_list[$key]['tag_list'] = $tmp_exam_tag_list;
@@ -69,9 +107,13 @@ class Exam extends MY_Controller{
 
         $data['start_time']=$start_time;
         $data['end_time']=$end_time;
+        $data['class_select_id']=$class_select_id;
+        $data['kemu_select_id']=$kemu_select_id;
         $data['select_id']=$select_id;
         $data['s_name']=$s_name;
         $data['exam_tag_list']=$exam_tag_list;
+        $data['exam_class_tag_list']=$exam_class_tag_list;
+        $data['exam_kemu_tag_list']=$exam_kemu_tag_list;
         $data['exam_list']=$exam_list;
         $data['pages']=pages($this->exam_model->getCount($this->where),$this->page,$this->perpage);
         $this->rendering_admin_template($data,'exam','exam_list');
@@ -90,8 +132,18 @@ class Exam extends MY_Controller{
 
 		$exam_tag_where['dele_status'] = NO_DELETE_STATUS;
 		$exam_tag_list=$this->exam_tag_model->select('*',$exam_tag_where);
+
+
+		$exam_class_tag_where['dele_status'] = NO_DELETE_STATUS;
+		$exam_class_tag_list=$this->exam_tag_class_model->select('*',$exam_class_tag_where);
+
+		$exam_kemu_tag_where['dele_status'] = NO_DELETE_STATUS;
+		$exam_kemu_tag_list=$this->exam_tag_kemu_model->select('*',$exam_kemu_tag_where);
+
 		$data['data_info'] = $exam_list;
 		$data['exam_tag_list'] = $exam_tag_list;
+		$data['exam_class_tag_list'] = $exam_class_tag_list;
+		$data['exam_kemu_tag_list'] = $exam_kemu_tag_list;
 		$data['id'] = $id;
         $this->rendering_admin_template($data,'exam','exam_create');
     }
@@ -268,7 +320,30 @@ class Exam extends MY_Controller{
 			createDomainAjax($ret["msg"], $ret["status"]);
 			exit;
 		}
+
+
+		$class_cate_id = $this->input->post('class_cate_id');
+		$kemu_cate_id = $this->input->post('kemu_cate_id');
+
+		if (!$class_cate_id) {
+			$ret["status"] = -9;
+			$ret["msg"] = "请选择考试年级分类";
+			createDomainAjax($ret["msg"], $ret["status"]);
+			exit;
+		}
+
+		if (!$kemu_cate_id) {
+			$ret["status"] = -10;
+			$ret["msg"] = "请选择考试科目分类";
+			createDomainAjax($ret["msg"], $ret["status"]);
+			exit;
+		}
+
+
+
 		$content_ret["exam_name"] = $exam_name;
+		$content_ret["class_cate_id"] = $class_cate_id;
+		$content_ret["kemu_cate_id"] = $kemu_cate_id;
 		$content_ret["cate_id"] = $cate_id;
 		$content_ret["modify_by"] = $this->member_id;
 		$content_ret["modify_time"] = $now_date;
@@ -280,6 +355,24 @@ class Exam extends MY_Controller{
 
 	public function oneAddAjaxAction() {
 		$exam_name = $this->input->post('exam_name');
+		$class_cate_id = $this->input->post('class_cate_id');
+		$kemu_cate_id = $this->input->post('kemu_cate_id');
+
+		if (!$class_cate_id) {
+			$ret["status"] = -9;
+			$ret["msg"] = "请选择考试年级分类";
+			createDomainAjax($ret["msg"], $ret["status"]);
+			exit;
+		}
+
+		if (!$kemu_cate_id) {
+			$ret["status"] = -10;
+			$ret["msg"] = "请选择考试科目分类";
+			createDomainAjax($ret["msg"], $ret["status"]);
+			exit;
+		}
+
+
 		$cate_id = $this->input->post('cate_id');
 		$now_date = date("Y-m-d H:i:s", time());
 		if (!$exam_name) {
@@ -290,11 +383,13 @@ class Exam extends MY_Controller{
 		}
 		if (!$cate_id) {
 			$ret["status"] = -2;
-			$ret["msg"] = "请选择考试分类";
+			$ret["msg"] = "请选择考试类型分类";
 			createDomainAjax($ret["msg"], $ret["status"]);
 			exit;
 		}
 		$content_ret["exam_name"] = $exam_name;
+		$content_ret["class_cate_id"] = $class_cate_id;
+		$content_ret["kemu_cate_id"] = $kemu_cate_id;
 		$content_ret["cate_id"] = $cate_id;
 		$content_ret["status"] = NO_DELETE_STATUS;
 		$content_ret["created_time"] = $now_date;

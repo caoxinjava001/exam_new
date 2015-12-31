@@ -8,11 +8,32 @@
             <form method="get">
                 <table class="search-tab">
                     <tr>
-                        <th width="100">试卷名称:</th>
+                        <th width="60">试卷名称:</th>
                         <td>
                             <input type="text" name="s_name" id="s_name" value="<?echo $s_name; ?>" /> 
                         </td>
-                        <th width="80">试卷分类:</th>
+
+                        <th width="60">年级分类:</th>
+                        <td>
+                            <select name="class_select_id">
+                                <option value="" >所有</option>
+								<?php foreach($exam_class_tag_list as $val) { ?>
+                                <option value="<?php echo  $val['id'];?>" <?php echo (strlen($class_select_id)>0&&$class_select_id==$val['id'])?'selected':'';?>><?php echo $val['cate_name']; ?></option>
+								<?php } ?>
+                            </select>
+                        </td>
+
+                        <th width="60">科目分类:</th>
+                        <td>
+                            <select name="kemu_select_id">
+                                <option value="" >所有</option>
+								<?php foreach($exam_kemu_tag_list as $val) { ?>
+                                <option value="<?php echo  $val['id'];?>" <?php echo (strlen($kemu_select_id)>0&&$kemu_select_id==$val['id'])?'selected':'';?>><?php echo $val['cate_name']; ?></option>
+								<?php } ?>
+                            </select>
+                        </td>
+
+                        <th width="60">类型分类:</th>
                         <td>
                             <select name="select_id">
                                 <option value="" >所有</option>
@@ -21,7 +42,8 @@
 								<?php } ?>
                             </select>
                         </td>
-                        <th width="120">开始/结束时间:</th>
+
+                        <th width="100">开始/结束时间:</th>
                         <td>
                             <input type="text" name="start_time" id="s_date_start" class="xx_time"  value="<?echo $start_time; ?>" />
                         </td>
@@ -50,7 +72,9 @@
 <!--                        <th class="tc" width="5%"><input class="allChoose" name="" type="checkbox"></th>-->
                         <th>ID</th>
                         <th>试卷名称</th>
-                        <th>所属分类</th>
+                        <th>年级分类</th>
+                        <th>科目分类</th>
+                        <th>类型分类</th>
                         <th>创建时间</th>
                         <th>修改时间</th>
                         <th>操作</th>
@@ -60,6 +84,8 @@
 <!--                            <td class="tc"><input name="ids"  type="checkbox" rel="--><?php //echo $v['id'];?><!--"></td>-->
                             <td><?php echo $v['id']?></td>
                             <td><?php echo $v['exam_name']?></td>
+                            <td><?php echo $v['class_tag_list']['cate_name'];?></td>
+                            <td><?php echo $v['kemu_tag_list']['cate_name'];?></td>
                             <td><?php echo $v['tag_list']['cate_name'];?></td>
                             <td><?php echo $v['created_time']?></td>
                             <td><?php echo $v['modify_time']?></td>
