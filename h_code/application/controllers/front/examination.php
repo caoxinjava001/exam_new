@@ -369,4 +369,55 @@ class Examination extends MY_Controller{
         $this->load->view('/front/result_err',$data);	// 导入 主体部分 视图模板
     }
 
+    public function examLogListNew(){
+        $this->checkError();
+        $data=array();
+        $page_where['user_id']=$this->user_id;
+        $page_where['dele_status']=NO_DELETE_STATUS;
+
+        $res=$this->member_exam_model->list_info('id,exam_id,error_count,shiti_count',$page_where,$this->page,$this->perpage);
+        foreach ($res as $key=>$val) {
+            $where_e['id']=$val['exam_id'];
+            $exam_info=$this->exam_model->get_one('*',$where_e);
+            $res[$key]['exam_name'] = $exam_info['exam_name'];
+            $res[$key]['right_count'] = intval($val['shiti_count']) - intval($val['error_count']);
+        }
+
+        $data['pages']=pages($this->member_exam_model->getCount($page_where),$this->page,$this->perpage);
+        $data['res']=$res;
+        $data['user_id']=$this->user_id;
+        $data['user_name']=$this->user_name;
+        $this->load->view('/front/liebiao_log_new',$data);  // 导入 主体部分 视图模板
+    }
+
+	public function deleteExam(){
+
+        $id=$this->input->get_post('id')?$this->input->get_post('id'):0;
+
+        $info = array(
+            'status' => 0,
+            'msg' => '删除失败',
+        );
+
+        if(!$id){
+            exit(json_encode($info));
+        }
+
+        $where="id in ({$id}) ";
+        $data['dele_status']=DELETE_STATUS;
+        $bool=$this->member_exam_model->update($data,$where);
+
+        if($bool){
+            $info = array(
+                'status' => 1,
+                'msg' => '删除成功',
+            );
+            exit(json_encode($info));
+        }
+        exit(json_encode($info));
+	
+	}
+
+
+
 }
