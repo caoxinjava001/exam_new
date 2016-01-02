@@ -13,6 +13,10 @@ class Examination extends MY_Controller{
 
     public function __construct(){
         parent::__construct('frontend');
+
+		$this->load->model('exam_tag_kemu_model');
+		 $this->load->model('exam_tag_class_model');
+
         $this->load->model('exam_model');
         $this->load->model('exam_tag_model');
         $this->load->model('exam_stem_model');
@@ -169,24 +173,76 @@ class Examination extends MY_Controller{
             );
             exit(json_encode($info));
         }
-
+		//var_dump($content);exit;
+		$error_count = 0;
+		$shiti_count = 0;
+		$curr_num = 0;
+		$data_arr_right = array();
+		$data_arr_error = array();
         foreach($content as $v){
             if(!$v['id']){
                 continue;
             }
+			
             if($v['type']==EXAM_SINGLE){
+				$curr_num++;
+				$shiti_count++;
                 $v['exam']=$this->getExam($v['id']);
+
+				array_multisort($v['answer']);	
+				$c_a=explode(',',$v['exam']['correct_answer']);
+				array_multisort($c_a);
+				if($v['answer']==$c_a){
+					$data_arr_right[$curr_num] = $v;
+				} else {
+					$error_count ++;
+					$data_arr_error[$curr_num] = $v;
+				}
+
                 $data_arr['single'][]=$v;
+
             }
             if($v['type']==EXAM_JUDGE){
+				$curr_num++;
+				$shiti_count++;
                 $v['exam']=$this->getExam($v['id']);
+
+				array_multisort($v['answer']);	
+				$c_a=explode(',',$v['exam']['correct_answer']);
+				array_multisort($c_a);
+				if($v['answer']==$c_a){
+					$data_arr_right[$curr_num] = $v;
+				} else {
+					$error_count ++;
+					$data_arr_error[$curr_num] = $v;
+				}
+
                 $data_arr['judge'][]=$v;
             }
             if($v['type']==EXAM_MORE){
+				$curr_num++;
+				$shiti_count++;
                 $v['exam']=$this->getExam($v['id']);
+
+				array_multisort($v['answer']);	
+				$c_a=explode(',',$v['exam']['correct_answer']);
+				array_multisort($c_a);
+				if($v['answer']==$c_a){
+					$data_arr_right[$curr_num] = $v;
+				} else {
+					$error_count ++;
+					$data_arr_error[$curr_num] = $v;
+				}
+
                 $data_arr['more'][]=$v;
             }
         }
+		//var_dump($curr_num,$shiti_count);exit;
+        $insert['error_count']=$error_count;
+        $insert['shiti_count']=$shiti_count;
+        $insert['use_dec_error']=serialize($data_arr_error);
+        $insert['use_dec_right']=serialize($data_arr_right);
+
         $insert['use_dec_v']=serialize($data_arr);
         $insert['exam_id']=$eid;
         $insert['user_id']=$uid;
@@ -260,6 +316,57 @@ class Examination extends MY_Controller{
         $data['user_id']=$this->user_id;
         $data['user_name']=$this->user_name;
         $this->load->view('/front/liebiao_log',$data);  // 导入 主体部分 视图模板
+    }
+
+
+
+    public function result_err(){
+        $this->checkError();
+
+        $data=array();
+        $eid =$this->input->get_post('eid')?$this->input->get_post('eid'):0;
+        $id =$this->input->get_post('id')?$this->input->get_post('id'):0;
+
+        $where['user_id']=$this->user_id;
+        if($eid) {
+            $where['exam_id'] = $eid;
+        }else{
+            $where['id'] = $id;
+        }
+        $where['dele_status']=NO_DELETE_STATUS;
+        $data = $this->member_exam_model->get_one('*', $where);
+
+        $data['use_dec_error'] = unserialize($data['use_dec_error']);
+        $data['use_dec_right'] = unserialize($data['use_dec_right']);
+        $data['quest_num']=$data['shiti_count'];
+        $data['error_count']=$data['error_count'];
+        $data['user_id']=$this->user_id;
+        $data['user_name']=$this->user_name;
+        
+        $where_e['dele_status']=NO_DELETE_STATUS;
+        $where_e['status']=1;
+        $where_e['id']=$eid?$eid:$data['exam_id'];
+        $exam=$this->exam_model->get_one('*',$where_e);
+
+        $data['exam_name'] = $exam['exam_name'];
+
+
+		$exam_tag_where['id'] = $exam['cate_id'];
+		$exam_tag_list=$this->exam_tag_model->get_one('*',$exam_tag_where);
+		$data['tag_list'] = $exam_tag_list;
+	
+
+
+		$exam_class_tag_where['id'] = $exam['class_cate_id'];
+		$exam_class_tag_list=$this->exam_tag_class_model->get_one('*',$exam_class_tag_where);
+		$data['class_tag_list'] = $exam_class_tag_list;
+
+		$exam_kemu_tag_where['id'] = $exam['kemu_cate_id'];
+		$exam_kemu_tag_list=$this->exam_tag_kemu_model->get_one('*',$exam_kemu_tag_where);
+		$data['kemu_tag_list'] = $exam_kemu_tag_list;
+//var_dump($data['kemu_tag_list'],$exam['kemu_cate_id'],$exam_class_tag_where);exit;
+
+        $this->load->view('/front/result_err',$data);	// 导入 主体部分 视图模板
     }
 
 }
