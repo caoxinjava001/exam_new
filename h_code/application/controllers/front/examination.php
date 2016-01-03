@@ -480,4 +480,30 @@ class Examination extends MY_Controller{
     }
 
 
+    public function indexNew(){
+        $this->checkError();
+
+		$data=array();
+
+        $where['dele_status']=NO_DELETE_STATUS;
+        $tags=$this->exam_tag_model->select('*',$where,500,'view_order asc');
+
+		$exam_class_tag_where['dele_status'] = NO_DELETE_STATUS;
+		$exam_class_tag_list=$this->exam_tag_class_model->select('*',$exam_class_tag_where,500,'view_order asc');
+
+		$exam_kemu_tag_where['dele_status'] = NO_DELETE_STATUS;
+		$exam_kemu_tag_list=$this->exam_tag_kemu_model->select('*',$exam_kemu_tag_where,500,'view_order asc');
+
+		$data['user_name'] = $this->user_name;
+		$data['user_id'] = $this->user_id;
+
+        $data['tags']=$tags;
+		$data['exam_class_tag_list'] = $exam_class_tag_list;
+		$data['exam_kemu_tag_list'] = $exam_kemu_tag_list;
+
+
+        $this->load->view('/front/index_new',$data);	// 导入 主体部分 视图模板
+    }
+
+
 }
