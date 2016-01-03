@@ -419,5 +419,65 @@ class Examination extends MY_Controller{
 	}
 
 
+    public function examListNew(){
+        $data=array();
+
+        $where['dele_status']=NO_DELETE_STATUS;
+        $tags=$this->exam_tag_model->select('*',$where,500,'view_order asc');
+
+		$exam_class_tag_where['dele_status'] = NO_DELETE_STATUS;
+		$exam_class_tag_list=$this->exam_tag_class_model->select('*',$exam_class_tag_where,500,'view_order asc');
+
+		$exam_kemu_tag_where['dele_status'] = NO_DELETE_STATUS;
+		$exam_kemu_tag_list=$this->exam_tag_kemu_model->select('*',$exam_kemu_tag_where,500,'view_order asc');
+
+
+
+        $tid=$this->input->get_post('t_id')?$this->input->get_post('t_id'):'';
+        $c_id=$this->input->get_post('c_id')?$this->input->get_post('c_id'):'';
+        $k_id=$this->input->get_post('k_id')?$this->input->get_post('k_id'):'';
+        $s_word=$this->input->get_post('s_word')?$this->input->get_post('s_word'):'';
+
+        $page_where="dele_status =".NO_DELETE_STATUS;
+
+		if ($c_id) {
+			$page_where .=" and class_cate_id ={$c_id}";
+			$class_name=$this->exam_tag_class_model->get_one('cate_name','id ='.$c_id);
+			
+		}
+		if ($k_id) {
+			$page_where .=" and kemu_cate_id ={$k_id}";
+			$kemu_name=$this->exam_tag_kemu_model->get_one('cate_name','id ='.$k_id);
+		}
+		if ($tid) {
+			$page_where .=" and cate_id ={$tid}";
+			$tag_name=$this->exam_tag_model->get_one('cate_name','id ='.$tid);
+		}
+
+        if(strlen(trim($s_word))>0){
+            $page_where.=" and exam_name like'%{$s_word}%'";
+        }
+
+        $res=$this->exam_model->list_info('*',$page_where,$this->page,$this->perpage);
+
+        $data['pages']=pages($this->exam_model->getCount($page_where),$this->page,$this->perpage);
+        $data['res']=$res;
+        $data['tags']=$tags;
+		$data['exam_class_tag_list'] = $exam_class_tag_list;
+		$data['exam_kemu_tag_list'] = $exam_kemu_tag_list;
+
+        $data['c_id']=$c_id;
+        $data['k_id']=$k_id;
+        $data['curr_id']=$tid;
+        $data['class_name']=$class_name['cate_name'];
+        $data['kemu_name']=$kemu_name['cate_name'];
+        $data['tag_name']=$tag_name['cate_name'];
+        $data['s_word']=$s_word;
+        $data['user_id']=$this->user_id;
+        $data['user_name']=$this->user_name;
+
+        $this->load->view('/front/liebiao_new',$data);	// 导入 主体部分 视图模板
+    }
+
 
 }
