@@ -32,18 +32,24 @@ rel=Stylesheet type=text/css href="<?php echo STATICS_PATH;?>/houtai_files/userc
       target=iframe_right>我的会员中心</A></SPAN> </DIV></DIV>
       <DIV class=lmenucon>
       <DIV class=collapsed><SPAN onclick='ShowMenu("leftNav1")'>我的模拟考试</SPAN> 
-      <DIV id=leftNav1><A class=menu_l href="/examination/examList?user_id=<?php echo $user_id; ?>&user_name=<?php echo $user_name; ?>" 
-      target=_blank>在线模拟考场</A> <A class=menu_l 
-      onclick="kaoshi110_ajaxloginconfirm('#')" 
-      target=iframe_right>我的考卷</A> </DIV>
+      <DIV id=leftNav1><A class=menu_l href="/examination/examListNew?user_id=<?php echo $user_id; ?>&user_name=<?php echo $user_name; ?>" 
+      target=_blank>在线模拟考场</A> 
+	  <A class=menu_l 
+	  href="/examination/examLogList?user_id=<?php echo $user_id; ?>&user_name=<?php echo $user_name; ?>" 
+      target=iframe_right>我的考卷</A> 
+
+	  <A class=menu_l 
+	  href="/examination/examLogListNew?user_id=<?php echo $user_id; ?>&user_name=<?php echo $user_name; ?>" 
+      target=iframe_right>我的错题库</A> 
+	  </DIV>
       </DIV></DIV>
       <DIV class=lmenucon>
       <DIV class=collapsed><SPAN onclick='ShowMenu("leftNav2")'>我的资料信息</SPAN> 
       <DIV id=leftNav2><A class=menu_l 
-      onclick="kaoshi110_ajaxloginconfirm('#')" 
-      target=iframe_right>修改我的资料</A> <A class=menu_l 
-      onclick="kaoshi110_ajaxloginconfirm('#')" 
-      target=iframe_right>修改密码</A> </DIV></DIV></DIV>
+      href="http://www.qingdawangxiao.com/member/edit_baseinfo.php" 
+      target=_blank>修改我的资料</A> <A class=menu_l 
+      href="http://www.qingdawangxiao.com/member/edit_baseinfo.php" 
+      target=_blank>修改密码</A> </DIV></DIV></DIV>
     
      
       <DIV class=mbd></DIV></DIV></TD>
@@ -65,7 +71,7 @@ rel=Stylesheet type=text/css href="<?php echo STATICS_PATH;?>/houtai_files/userc
           colSpan=3>登录名称：<?php echo $user_name; ?> </TD>
           <TD style="BORDER-BOTTOM: #efefef 1px solid" class=Pswgary 
             height=30><SPAN style="BORDER-BOTTOM: #efefef 1px solid" 
-            class=Pswgary><A  href="#"><U><IMG   src="<?php echo STATICS_PATH;?>/houtai_files/kszxgrxx.gif" width=24 
+            class=Pswgary><A  href="http://www.qingdawangxiao.com/member/edit_baseinfo.php"><U><IMG   src="<?php echo STATICS_PATH;?>/houtai_files/kszxgrxx.gif" width=24 
             height=15>修改个人信息</U></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
           </SPAN></TD></TR>
         <TR>

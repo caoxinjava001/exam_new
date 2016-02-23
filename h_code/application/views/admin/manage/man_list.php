@@ -1,7 +1,7 @@
 <div class="main-wrap">
 
     <div class="crumb-wrap">
-        <div class="crumb-list"><i class="icon-font"></i><a href="/admin">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">代理商列表</span></div>
+        <div class="crumb-list"><i class="icon-font"></i><a href="/admin">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">管理员列表</span></div>
     </div>
     <div class="search-wrap">
         <div class="search-content">
@@ -9,10 +9,11 @@
             <form method="get">
                 <table class="search-tab">
                     <tr>
-                        <th width="120">代理商名称:</th>
+                        <th width="120">管理员名称:</th>
                         <td>
                             <input type="text" name="s_name" id="s_name" value="<?echo $s_name; ?>" /> 
                         </td>
+						<?php /*
                         <th width="80">省份:</th>
                         <td>
                             <select name="select_id">
@@ -22,11 +23,12 @@
                                 <?php }?>
                             </select>
                         </td>
+						*/ ?>
                         <td>
                             <input class="btn btn-primary btn2" value="查询" type="submit">
                         </td>
                         <td>
-                        <a id="updateOrd" href="/manage/create" class="btn btn-primary btn2"><i class="icon-font"></i>增加代理商</a>
+                        <a id="updateOrd" href="/manage/create" class="btn btn-primary btn2"><i class="icon-font"></i>增加管理员</a>
                         </td>
                 </table>
             </form>
