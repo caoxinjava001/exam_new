@@ -29,11 +29,11 @@ class Manage extends MY_Controller{
      * 运营商列表页面
      */
     public function index(){
-        $this->where= 'dele_status = '.NO_DELETE_STATUS;    //未删除的
+        $this->where= 'login_role_id =1 and dele_status = '.NO_DELETE_STATUS;    //未删除的
 
         //限制运营商权限
         if($this->login_role==THIRD_ROLE_INFO){
-            $this->where.=' and id='.$this->member_id;
+           // $this->where.=' and id='.$this->member_id;
         }
 
         $select_id=$this->input->get_post('select_id'); //选择的省份id
@@ -70,7 +70,7 @@ class Manage extends MY_Controller{
      */
     public function create(){
         $data=array();
-        $data['province']=$this->province_model->getProvince();
+        //$data['province']=$this->province_model->getProvince();
         $this->rendering_admin_template($data,'manage','man_create');
     }
 
@@ -87,11 +87,11 @@ class Manage extends MY_Controller{
         }
 
         $data_info=$this->admin_user_model->get_one('*',$where);
-        $province=$this->province_model->getProvince();
+        //$province=$this->province_model->getProvince();
 
         $data['data_info']=$data_info;
-        $data['province']=$province;
-        $data['city']=$this->city_model->getList($data_info['province']);
+        //$data['province']=$province;
+        //$data['city']=$this->city_model->getList($data_info['province']);
 
         $this->rendering_admin_template($data,'manage','man_create');
     }
@@ -109,8 +109,8 @@ class Manage extends MY_Controller{
 
         $name= $this->input->get_post('name');
         $login_role_id = $this->input->get_post('login_role_id')?$this->input->get_post('login_role_id'):2; //角色类型
-        $province_id = $this->input->get_post('province_id')?$this->input->get_post('province_id'):0; //省id
-        $city_id = $this->input->get_post('city_id')?$this->input->get_post('city_id'):0; //市id
+        //$province_id = $this->input->get_post('province_id')?$this->input->get_post('province_id'):0; //省id
+        //$city_id = $this->input->get_post('city_id')?$this->input->get_post('city_id'):0; //市id
         $addr= $this->input->get_post('addr');
         $mobile= trim($this->input->get_post('mobile'));
         $email= $this->input->get_post('email');
@@ -125,7 +125,8 @@ class Manage extends MY_Controller{
             );
             exit(json_encode($data));
         }
-        //省id
+        //省id管理
+		/*
         if(!$province_id){
             $data=array(
                 'status'=>0,
@@ -141,6 +142,7 @@ class Manage extends MY_Controller{
             );
             exit(json_encode($data));
         }
+		*/
         //手机号不能为空
         if(!$mobile){
             $data=array(
@@ -211,8 +213,8 @@ class Manage extends MY_Controller{
         }
 
         $post_data['user_name']=$name;
-        $post_data['province']=$province_id;
-        $post_data['city']=$city_id;
+        //$post_data['province']=$province_id;
+        //$post_data['city']=$city_id;
         $post_data['addr']=$addr;
         $post_data['mobile']=$mobile;
         $post_data['email']=$email;
