@@ -1,5 +1,5 @@
 <div class="crumb-wrap">
-    <div class="crumb-list"><i class="icon-font"></i><a href="/admin">首页</a><span class="crumb-step">&gt;</span><a href="/manage/index"><span class="crumb-name">代理商列表</span></a></div>
+    <div class="crumb-list"><i class="icon-font"></i><a href="/admin">首页</a><span class="crumb-step">&gt;</span><a href="/manage/index"><span class="crumb-name">管理列表</span></a></div>
 </div>
 <link href="<?php echo STATICS_PATH;?>/css/ui/jquery-ui-custom.min.css" type="text/css" rel="stylesheet"/>
 <link href="<?php echo STATICS_PATH;?>/css/b_reg.css" type="text/css" rel="stylesheet"/>
@@ -8,24 +8,25 @@
 <div class="xu" id="xu">
     <div class="cont_left">
         <div class="cont_demand">
-            <p class="demand_p1"><?php echo $data_info['id']?'修改代理商':'增加代理商';?></p>
+            <p class="demand_p1"><?php echo $data_info['id']?'修改管理员':'增加管理商';?></p>
         </div>
         <form id="manage_add">
             <input type="hidden" name="check_id" value="<?php echo $data_info['id'];?>"/>
             <div class="demand_text">
                 <div class="text">
-                    <span class="floatL span1"><i>*</i>代理商名称:</span>
-                    <input type="text" class="sect_1 floatL" name="name" placeholder="请填写代理商名称" value="<?php echo !empty($data_info['user_name'])?$data_info['user_name']:'';?>">
-                    <span class="span2 floatL">请填写代理商名称</span>
+                    <span class="floatL span1"><i>*</i>管理员名称:</span>
+                    <input type="text" class="sect_1 floatL" name="name" placeholder="请填写管理名称" value="<?php echo !empty($data_info['user_name'])?$data_info['user_name']:'';?>">
+                    <span class="span2 floatL">请填写管理名称</span>
                 </div>
                 <div class="text">
                     <span class="floatL span1"><i>*</i>角色:</span>
                     <select  class="sect_1 floatL" name="login_role_id">
-                        <option value="2" <?php echo $data_info['login_role_id']==THIRD_ROLE_INFO?'selected':'' ;?>>代理商</option>
+                        <!--<option value="2" <?php echo $data_info['login_role_id']==THIRD_ROLE_INFO?'selected':'' ;?>>代理商</option>-->
                         <option value="1" <?php echo $data_info['login_role_id']==MANGER_ROLE_INFO?'selected':'' ;?>>管理员</option>
                     </select>
-                    <span class="span2 floatL">请选择省份</span>
+                    <!--<span class="span2 floatL">请选择省份</span>-->
                 </div>
+				<?php /*
                 <div class="text">
                     <span class="floatL span1"><i>*</i>省份:</span>
                     <select  class="sect_1 floatL" name="province_id">
@@ -46,6 +47,7 @@
                     </select>
                     <span class="span2 floatL">请选择城市</span>
                 </div>
+				*/?>
                 <div class="text">
                     <span class="floatL span1"><i></i>地址:</span>
                     <input type="text" class="sect_1 floatL" name="addr" placeholder="请填写地址" value="<?php echo !empty($data_info['addr'])?$data_info['addr']:'';?>">
